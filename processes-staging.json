@@ -1,0 +1,26 @@
+{
+    "apps": [
+        {
+            "name": "api-server",
+            "script": "./index.js",
+            "args": ["server"],
+            "instances": "2",
+            "exec_mode": "cluster_mode",
+            "port": 3000,
+            "env": {
+                "NODE_ENV": "staging"
+            }
+        },
+        {
+            "name": "api-worker",
+            "script": "./index.js",
+            "args": ["worker"],
+            "instances": "1",
+            "exec_mode": "fork_mode",
+            "port": 3001,
+            "env": {
+                "NODE_ENV": "staging"
+            }
+        }
+    ]
+}

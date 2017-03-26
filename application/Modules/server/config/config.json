@@ -1,0 +1,29 @@
+{
+    "routing": {
+        "/version": {
+            "method": "GET",
+            "controller": "Version",
+            "action": "version"
+        },
+        "/status/check": {
+            "method": "GET",
+            "controller": "Version",
+            "action": "statusCheck"
+        },
+        "/status/health": {
+            "method": "GET",
+            "controller": "Version",
+            "action": "statusCheck"
+        },
+        "/status/alive": {
+            "method": "GET",
+            "controller": "Version",
+            "action": "alive"
+        }
+    },
+    "requestHandlers": [
+        "RequestLogger",
+        "ErrorHandler",
+        "AccessControl"
+    ]
+}
