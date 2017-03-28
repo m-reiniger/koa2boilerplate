@@ -24,7 +24,7 @@ class VersionService {
         let version = process.env.npm_package_version;
 
         if (!version) {
-            let pjson = require(__root + '/package.json');
+            let pjson = require('../../../../../package.json');
             version = pjson.version;
         }
         return version;

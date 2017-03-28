@@ -24,7 +24,7 @@ class VersionController {
      *
      * @param ctx
      */
-    versionAction(ctx) {
+    async versionAction(ctx) {
         ctx.body = {
             "version": this.versionService.getVersion()
         };
@@ -34,7 +34,7 @@ class VersionController {
      *
      * @param ctx
      */
-    statusCheckAction(ctx) {
+    async statusCheckAction(ctx) {
         ctx.body = this.versionService.getStatusJson();
     }
 
@@ -42,7 +42,7 @@ class VersionController {
      *
      * @param ctx
      */
-    aliveAction(ctx) {
+    async aliveAction(ctx) {
         ctx.body = 'OK';
     }
 

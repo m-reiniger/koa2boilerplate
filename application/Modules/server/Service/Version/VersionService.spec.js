@@ -1,10 +1,30 @@
-"use strict";
+'use strict';
 
 const VersionService = require('./VersionService');
 
+let versionService, version;
+
 describe('VersionService', () => {
-    it('getVersion() should return 0.1.0', () => {
-        let versionService = new VersionService();
-        expect(versionService.getVersion()).toBe('0.1.0');
+
+    beforeAll(() => {
+        version = process.env.npm_package_version;
     });
+
+    beforeEach(() => {
+        versionService = new VersionService();
+    });
+
+
+    it('getVersion() should return the correct version', () => {
+        expect(versionService.getVersion()).toBe(version);
+    });
+
+    afterEach(() => {
+
+    });
+
+    afterAll(() => {
+
+    });
+
 });
