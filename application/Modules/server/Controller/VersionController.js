@@ -5,7 +5,7 @@
 
 
 const bunyan = require('bunyan'),
-    VersionHandler = require('../Handler/Version/VersionHandler');
+    VersionService = require('../Handler/Version/VersionService');
 
 /**
  *
@@ -17,7 +17,7 @@ class VersionController {
      */
     constructor() {
         this.logger = bunyan.createLogger({name: __servicename, src: true, level: 20});
-        this.versionHandler = new VersionHandler();
+        this.versionHandler = new VersionService();
     }
 
     /**
@@ -27,7 +27,7 @@ class VersionController {
     versionAction(ctx) {
         ctx.body = {
             "version": this.versionHandler.getVersion()
-        }
+        };
     }
 
     /**

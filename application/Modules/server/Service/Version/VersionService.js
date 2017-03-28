@@ -1,13 +1,12 @@
 'use strict';
 
 // reise modules
-const fs = require('fs'),
-    toHHMMSS = require('../../../../Util/TimeUtil').toHHMMSS;
+const toHHMMSS = require('../../../../Util/TimeUtil').toHHMMSS;
 
 /**
  *
  */
-class VersionHandler {
+class VersionService {
 
     /**
      *
@@ -59,4 +58,4 @@ class VersionHandler {
 
 
 // *******************************************************
-module.exports = VersionHandler;
+module.exports = VersionService;
