@@ -1,32 +1,33 @@
 {
-    "name": "checkend",
-    "version": "0.1.0",
-    "description": "backend for checklists",
-    "main": "index.js",
-    "scripts": {
-        "build-dev": "docker-compose build",
-        "run-dev": "docker-compose up",
-        "test": "grunt test",
-        "start": "node index.js server"
-    },
-    "author": "Michael Reiniger",
-    "license": "MIT",
-    "engine": "node >= 7.6gr.x",
-    "repository": {
-        "type": "git",
-        "url": ""
-    },
-    "dependencies": {
-        "bunyan": "^1.8.9",
-        "convict": "^3.0.0",
-        "hal": "0.1.0",
-        "jsonwebtoken": "7.3.0",
-        "koa": "2.2.0",
-        "koa-bodyparser": "^4.2.0",
-        "koa-compress": "2.0.0",
-        "koa-response-time": "2.0.0",
-        "koa-router": "^7.0.1"
-    },
-    "devDependencies": {
-    }
+  "name": "checkend",
+  "version": "0.1.0",
+  "description": "backend for checklists",
+  "main": "index.js",
+  "scripts": {
+    "build-dev": "docker-compose build",
+    "run-dev": "docker-compose up",
+    "test": "jest --coverage",
+    "start": "node index.js server"
+  },
+  "author": "Michael Reiniger",
+  "license": "MIT",
+  "engine": "node >= 7.6gr.x",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "dependencies": {
+    "bunyan": "^1.8.9",
+    "convict": "^3.0.0",
+    "hal": "0.1.0",
+    "jsonwebtoken": "7.3.0",
+    "koa": "2.2.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-compress": "2.0.0",
+    "koa-response-time": "2.0.0",
+    "koa-router": "^7.0.1"
+  },
+  "devDependencies": {
+    "jest": "^19.0.2"
+  }
 }
